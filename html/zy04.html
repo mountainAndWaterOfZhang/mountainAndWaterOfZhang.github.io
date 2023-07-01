@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器实验</title>
+    <link rel="stylesheet" href="../css/zy04.css">
+</head>
+<body>
+    <div id="main">
+        <header id="mainHeader">
+            <nav>
+                <div class="logo"><img src="../image/logo.png"></div>
+                <div class="menu">
+                    <a href="../index.html" >主页</a>
+                    <a href="./zy01.html" >学习生涯</a>
+                    <a href="./zy02.html" >喜欢的书籍</a>
+                    <a href="./zy03.html">喜欢的游戏</a>
+                    <a href="#" id="thisHtml">计算器实验</a>
+                </div>
+                <div class="minMenu"><img src="../image/菜单.png"></div>
+                <a href="../html/inform.html" id="inform">查看报告</a>
+            </nav>
+        </header>
+        <section>
+            <form>
+                <input type="text" disabled placeholder="0" id="dp">
+                <input type="button" value="AC" id="ac">
+                <input type="button" value="DE" id="de">
+                <input type="button" value="." class="op">
+                <input type="button" value="+" class="op">
+                <input type="button" value="7" class="num">
+                <input type="button" value="8" class="num">
+                <input type="button" value="9" class="num">
+                <input type="button" value="-" class="op">
+                <input type="button" value="4" class="num">
+                <input type="button" value="5" class="num">
+                <input type="button" value="6" class="num">
+                <input type="button" value="x" class="op">
+                <input type="button" value="1" class="num">
+                <input type="button" value="2" class="num">
+                <input type="button" value="3" class="num">
+                <input type="button" value="÷" class="op">
+                <input type="button" value="0" class="num">
+                <input type="button" value="=" id="eq">
+              </form>
+        </section>
+        <footer>
+            <p>本网站为个人学习web阶段成果展示所用,查看更多报告可点击下方链接前往CSDN浏览《O_o》</p>
+            <a href="#">HTML&CSS学习总结</a>
+            <a href="#">JavaScript学习总结</a>
+        </footer>
+    </div>
+    <script>
+        const menuButton=document.querySelector('.minMenu'),
+        menu = document.querySelector('.menu')
+        menuButton.onclick = () => {
+      menu.classList.toggle('open')}
+
+      const dp = document.querySelector("#dp")
+          ac = document.querySelector("#ac"),
+          de = document.querySelector("#de"),
+          eq = document.querySelector("#eq"),
+          nums = document.querySelectorAll(".num"),
+          ops = document.querySelectorAll(".op")
+    for(const num of nums) {
+      num.onclick = () => dp.value = dp.value + num.value
+    }
+    for(const op of ops) {
+      op.addEventListener('click', () => {
+        if(!isNaN(dp.value.slice(-1))){
+          dp.value = dp.value + op.value
+        }
+      })
+    }
+    ac.onclick = () => dp.value = ''
+    de.onclick = () => dp.value = dp.value.slice(0,-1)
+    eq.onclick = () => {
+      try {
+        dp.value = eval(dp.value.replaceAll('÷','/').replaceAll('x','*'))
+      }catch(e){
+        alert('This expression is invalid !')
+      }
+    }
+    </script>
+</body>
+</html>

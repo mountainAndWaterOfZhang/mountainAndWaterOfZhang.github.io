@@ -1,0 +1,251 @@
+/* https://plus.unsplash.com/premium_photo-1687164960423-371094156ade?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100% ;
+    min-width: 754px;
+    background-color: beige;
+    display: grid;
+    place-content: center;
+}
+
+/* 设置开头页面 */
+
+#thisHtml{
+    background-color: rgb(120, 196, 240);
+}
+
+
+/* 设置底部 */
+#main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 1800px;    
+}
+
+
+/* 导航 */
+#mainHeader{
+    height: 5rem;
+    background-image: url('https://tse3-mm.cn.bing.net/th/id/OIP-C.xc5KsKdO2u9T5hBCpE0yCgHaEK?pid=ImgDet&rs=1');
+    backdrop-filter: blur(.1rem);
+    background-size: cover;
+    background-position: center;  
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+height: 3.2rem;
+display: grid;
+place-content: center;
+}
+.logo img{  
+    height:100% ;
+    width: 4rem;
+}
+
+.menu{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    flex-grow: 1;
+}
+
+@media(min-width:900px){
+    .menu{
+        width: 554px;
+        flex-grow: 0;
+    }
+}
+
+nav{
+    position: absolute;
+    top: .5rem;
+    left: 2rem;
+    width: 90%;
+    background-color: aliceblue;
+    margin: .5rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    gap:3rem;
+    align-items: center;
+}
+
+a{
+    padding: 0.5rem 0.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+a:hover{
+    background-color: rgb(120, 196, 240);
+}
+
+input{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    background: transparent;
+    border: none;
+    box-shadow: 5px 5px 15px rgb(188, 210, 223);
+}
+
+.minMenu img{
+    object-fit: cover;
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    }
+    
+    .menu.open{
+        height: 16rem;
+          opacity: 1;
+    }
+    
+    @media(max-width:900px){
+        .minMenu img{
+            display: block;
+        }
+        .menu{
+            flex-direction: column;
+            justify-content: space-around;
+            gap:0;
+            position: absolute;
+            top: 4rem;
+            right: 16rem;
+            width: 15rem;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            z-index: 1;
+            background-color: rgb(246, 230, 230);
+            backdrop-filter: blur(0.5rem);
+            transition: 0.5s;
+        }
+    }
+
+    #inform{
+        padding: 0.2rem 0.4rem;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0,0.2),-5px -5px 15px rgba(255, 255, 255, 0.2);
+   }
+
+   #inform:hover{
+       color: rgb(23, 15, 163);
+       box-shadow: 5px 5px 15px rgb(15, 72, 76,0.2),-5px -5px 15px rgba(7, 23, 122, 0.2); 
+   }
+    
+/* 页面主体 */
+section{
+    background: rgb(119, 228, 204);
+    height: 100vh;
+    display: grid;
+    /* 网格布局设置空间对齐方式 */
+    place-content: center;
+    flex-grow: 1;
+}
+
+
+form{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    background: rgb(51, 47, 47);
+    padding: 2rem 1rem;
+    margin: 1.5rem;
+    /* 圆角 */
+    border-radius: 1rem;
+    width: clamp(400px,50vh,600px);
+  }
+
+  form input {
+    /* 背景透明（显示父类的背景颜色） */
+    background-color: transparent;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    /* 盒子阴影  第一个参数：x轴向右 第二个参数：y轴向下 第三个参数：雾化扩散*/
+    box-shadow: 5px 5px 15px rgba(0, 0, 0,0.2),-5px -5px 15px rgba(255, 255, 255, 0.2);
+    padding: 1rem 1.5rem;
+    transition: 0.2s;
+    /* 改变鼠标样式 */
+    cursor: pointer;
+  }
+
+  form input:hover{
+    color: aqua;
+  }
+
+  /* 点击事件 */
+  input:active{
+    box-shadow: 5px 5px 15px rgb(15, 72, 76,0.2),-5px -5px 15px rgba(7, 23, 122, 0.2);
+  }
+
+  #dp{
+    grid-column: 1/-1;
+    text-align: end;
+    margin-bottom: 1.5rem;
+    /* 显示边框 */
+    border: solid;
+  }
+  
+  #dp:hover{
+    color: rgb(255, 255, 255);
+  }
+
+  /* 选定第n个控件 */
+  input:nth-child(18){
+    grid-column: 1/span 2;
+  }
+
+  #eq{
+    grid-column: 3/-1;
+  }
+
+  #ac,#de,#eq,.op{
+    color: aqua;
+  }
+
+  #ac:hover,#de:hover,#eq:hover,.op:hover{
+    color: white;
+  }
+
+/* 页面底部 */
+footer{
+    background-color: black;
+    /* height: 5rem; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+footer p{
+    color: white;
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+footer a{
+    color: aliceblue;
+    text-align: center;
+    grid-column: span 2;
+    margin: 1.5rem;
+}
+
+footer a:hover{
+    color: aqua;
+}

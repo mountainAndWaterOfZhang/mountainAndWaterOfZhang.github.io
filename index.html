@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWeb</title>
+
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <header id="mainHeader">
+            <nav>
+                <div class="logo"><img src="../image/logo.png"></div>
+                <div class="menu">
+                    <a href="#" id="thisHtml">主页</a>
+                    <a href="./html/zy01.html">学习生涯</a>
+                    <a href="./html/zy02.html">喜欢的书籍</a>
+                    <a href="./html/zy03.html">喜欢的游戏</a>
+                    <a href="./html/zy04.html">计算器实验</a>
+                </div>
+                <div class="minMenu"><img src="./image/菜单.png"></div>
+                <!-- <span class="iconfont icon-caidan"></span> -->
+                <a href="./html/inform.html" id="inform">查看报告</a>
+            </nav>
+            <p class="header_P">欢迎进入MyWeb</p>
+        </header>
+        <section>
+            <div class="readme">
+                <h1>网站介绍</h1>
+                <img src="https://images.unsplash.com/photo-1686681188232-86da3547e55c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=386&q=80">
+                <p>　本页面是基于HTML、纯CSS以及少量JavaScript构建而成。HTML页面共6页,其中第1页为网站主页,第6页为网站构建报告,剩余4页为网站子模块页面。由于是新手+缺乏美感,网站美化有些许欠佳。
+                    </p>
+            </div>
+            <div class="mouder">
+                <h1>站内导航</h1>
+                <div id="first">
+                    <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.W5sAcInHLeY_EX4hkkznEwHaE7?w=298&h=198&c=7&r=0&o=5&dpr=1.4&pid=1.7" class="mouder_image">
+                    <P class="mouder_p">关于上大学之后一些关于计算机学习情况的简单介绍</P>
+                    <p class="mouder_p"> (^v^)</p>
+                    <a class="mouder_a" href="./html/zy01.html">点击前往该页面</a>
+                </div>
+                <div id="second">
+                    <img class="mouder_image" src="https://tse4-mm.cn.bing.net/th/id/OIP-C.NvR6DbrxqwoeU6QLxfG4HwHaFj?w=241&h=181&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+                    <p class="mouder_p">平时有在看的实体书籍</p>
+                    <p class="mouder_p"> ٩(๑•ㅂ•)۶ </p>
+                    <a class="mouder_a" href="./html/zy02.html">点击前往该页面</a>
+                </div>
+                <div id="three">
+                    <img class="mouder_image" src="https://tse1-mm.cn.bing.net/th/id/OIP-C.gEr0Z_CSAzkJBLiaowAyowHaFj?w=216&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+                    <p class="mouder_p">那些我能玩到倒闭的游戏</p>
+                    <p class="mouder_p"> (˵¯͒〰¯͒˵)</p>
+                    <a class="mouder_a" href="./html/zy03.html">点击前往该页面</a>
+                </div>
+                <div id="four">
+                    <img class="mouder_image" src="https://tse4-mm.cn.bing.net/th/id/OIP-C.wXAfC5DSmWvdAXJTLebpmAHaHa?w=187&h=188&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+                    <p class="mouder_p">课堂上讲解的计算机实验（不知道写啥了,拿来凑一凑）</p>
+                    <p class="mouder_p">_(:зゝ∠)_</p>
+                    <a class="mouder_a" href="./html/zy04.html">点击前往该页面</a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>本网站为个人学习web阶段成果展示所用,查看更多报告可点击下方链接前往CSDN浏览《O_o》</p>
+            <a href="#">HTML&CSS学习总结</a>
+            <a href="#">JavaScript学习总结</a>
+        </footer>
+    </div>
+    <script>
+        const menuButton=document.querySelector('.minMenu'),
+        menu = document.querySelector('.menu')
+        menuButton.onclick = () => {
+      menu.classList.toggle('open')}
+    </script>
+</body>
+
+</html>

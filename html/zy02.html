@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喜欢的书籍</title>
+    <link rel="stylesheet" href="../css/zy02.css">
+</head>
+<body>
+    <div id="main">
+        <header id="mainHeader">
+            <nav>
+                <div class="logo"><img src="../image/logo.png"></div>
+                <div class="menu">
+                    <a href="../index.html" >主页</a>
+                    <a href="./zy01.html">学习生涯</a>
+                    <a href="#" id="thisHtml">喜欢的书籍</a>
+                    <a href="./zy03.html">喜欢的游戏</a>
+                    <a href="./zy04.html">计算器实验</a>
+                </div>
+                <div class="minMenu"><img src="../image/菜单.png"></div>
+                <a href="../html/inform.html" id="inform">查看报告</a>
+            </nav>
+        </header>
+        <section>
+            <div class="card" id="book">
+                <p id="first">我的阅读风格不太稳定,但总体还是偏向网文以及一些科幻的书籍,下面是我平常还是会时不时找来翻一下的书籍:</p>
+                <div class="book">
+                    <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.dwTwKOjOXWgT2J-2UKLyzwAAAA?w=115&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+                    <div class="p">
+                        <h2>简介</h2>
+                        <p>　　《平凡的世界》是中国作家路遥创作的一部全景式地表现中国当代城乡社会生活的百万字长篇小说。全书共三部。
+                        </p>
+                        <p>
+                            　　该书以中国70年代中期到80年代中期十年间为背景,通过复杂的矛盾纠葛，以孙少安和孙少平两兄弟为中心,刻画了当时社会各阶层众多普通人的形象;
+                            劳动与爱情、挫折与追求、痛苦与欢乐、日常生活与巨大社会冲突纷繁地交织在一起,深刻地展示了普通人在大时代历史进程中所走过的艰难曲折的道路。
+                        </p>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="p">
+                        <h2>简介</h2>
+                        <p> 　　文化大革命如火如荼地进行，天文学家叶文洁在其间历经劫难，被带到军方绝秘计划“红岸工程”。叶文洁以太阳为天线,向宇宙发出地球文明的第一声啼鸣，取得了探寻外星文明的突破性进展。三颗无规则运行的太阳主导下，四光年外的“三体文明”百余次毁灭与重生，正被逼迫不得不逃离母星，而恰在此时，他们接收到了地球发来的信息。对人性绝望的叶文洁向三体人暴露了地球的坐标，彻底改变了人类的命运。
+                        </p>
+                        <p>
+                            　　地球的基础科学出现了异常的扰动,纳米科学家汪淼进入神秘的网络游戏《三体》,开始逐步逼近这个世界的真相。汪淼参加一次玩家聚会时,接触到了地球上应对三体人到来而形成的一个秘密组织（ETO）。地球防卫组织中国区作战中心通过“古筝计划”,一定程度上挫败了拯救派和降临派扰乱人类科学界和其他领域思想的图谋，获悉处于困境之中的三体人为了得到一个能够稳定生存的世界决定入侵地球。
+                        </p>
+                        <p>
+                            　　在运用超技术锁死地球人的基础科学之后，庞大的三体舰队开始向地球进发，人类的末日悄然来临
+                        </p>
+                    </div>
+                    <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.lFBsABxqCYeSD03yUh1SngHaK2?w=120&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+                </div>
+                <div class="book">
+                    <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.hHaV4qPWnl2_NzrMElRR4gAAAA?w=127&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+                    <div class="p">
+                        <h2>简介</h2>
+                        <p>　　《龙族》，作家江南创作的系列长篇幻想小说，由《龙族Ⅰ：火之晨曦》《龙族Ⅱ：悼亡者之瞳》《龙族Ⅲ：黑月之潮》《龙族Ⅳ：奥丁之渊》《龙族Ⅴ：悼亡者的归来》组成。</p>
+                        <P>　　作品讲叙了少年路明非在申请国外大学时收到了来自芝加哥远郊处的一所私立大学:卡塞尔学院的邀请函,随着路明非同学坐上去往芝加哥的CC1000次列车,踏上了与龙族争锋的征程。</P>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>本网站为个人学习web阶段成果展示所用,查看更多报告可点击下方链接前往CSDN浏览《O_o》</p>
+            <a href="#">HTML&CSS学习总结</a>
+            <a href="#">JavaScript学习总结</a>
+        </footer>
+    </div>
+    <script>
+        const menuButton=document.querySelector('.minMenu'),
+        menu = document.querySelector('.menu')
+        menuButton.onclick = () => {
+      menu.classList.toggle('open')}
+    </script>
+</body>
+</html>

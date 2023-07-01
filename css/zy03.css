@@ -1,0 +1,247 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100% ;
+    min-width: 754px;
+    background-color: beige;
+    display: grid;
+    place-content: center;
+}
+
+/* 设置开头页面 */
+
+#thisHtml{
+    background-color: rgb(120, 196, 240);
+}
+
+
+/* 设置底部 */
+#main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 1800px;    
+}
+
+
+/* 导航 */
+#mainHeader{
+    height: 5rem;
+    background-image: url('https://tse3-mm.cn.bing.net/th/id/OIP-C.xc5KsKdO2u9T5hBCpE0yCgHaEK?pid=ImgDet&rs=1');
+    backdrop-filter: blur(.1rem);
+    background-size: cover;
+    background-position: center;  
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+height: 3.2rem;
+display: grid;
+place-content: center;
+}
+.logo img{  
+    height:100% ;
+    width: 4rem;
+}
+
+.menu{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    flex-grow: 1;
+}
+
+@media(min-width:900px){
+    .menu{
+        width: 554px;
+        flex-grow: 0;
+    }
+}
+
+nav{
+    position: absolute;
+    top: .5rem;
+    left: 2rem;
+    width: 90%;
+    background-color: aliceblue;
+    margin: .5rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    gap:3rem;
+    align-items: center;
+}
+
+a{
+    padding: 0.5rem 0.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+a:hover{
+    background-color: rgb(120, 196, 240);
+}
+
+input{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    background: transparent;
+    border: none;
+    box-shadow: 5px 5px 15px rgb(188, 210, 223);
+}
+
+.minMenu img{
+    object-fit: cover;
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    }
+    
+    .menu.open{
+        height: 16rem;
+          opacity: 1;
+    }
+    
+    @media(max-width:900px){
+        .minMenu img{
+            display: block;
+        }
+        .menu{
+            flex-direction: column;
+            justify-content: space-around;
+            gap:0;
+            position: absolute;
+            top: 4rem;
+            right: 16rem;
+            width: 15rem;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            z-index: 1;
+            background-color: rgb(246, 230, 230);
+            backdrop-filter: blur(0.5rem);
+            transition: 0.5s;
+        }
+    }
+
+    #inform{
+         padding: 0.2rem 0.4rem;
+         font-size: 1.2rem;
+         border-radius: 5px;
+         box-shadow: 5px 5px 15px rgba(0, 0, 0,0.2),-5px -5px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    #inform:hover{
+        color: rgb(23, 15, 163);
+        box-shadow: 5px 5px 15px rgb(15, 72, 76,0.2),-5px -5px 15px rgba(7, 23, 122, 0.2); 
+    }
+    
+/* 页面主体 */
+section{
+    background-color: aquamarine;
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+}
+
+/* 卡片布局 */
+.crad{
+margin: 0.5rem;
+padding: 1rem;
+border-style: solid;
+border-radius: 20px;
+display: flex;
+width: 80vw;
+}
+
+.crad img{
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 15px;
+    margin: 1rem 2rem;
+}
+
+.crad .read1{
+    color: antiquewhite;
+    border-style:groove;
+    border-radius: 10px;
+    /* text-align: center; */
+    background-color: #226097;
+    width: 60vw;
+    padding: 1rem 0.5rem;
+}
+
+.crad .read2{
+    color: antiquewhite;
+    border-style:groove;
+    border-radius: 10px;
+    background-color: #e25521;
+    width: 60vw;
+    padding: 1rem 0.5rem;
+}
+
+.crad .read3{
+    color: antiquewhite;
+    border-style:groove;
+    border-radius: 10px;
+    background-color: #82736e;
+    width: 60vw;
+    padding: 1rem 0.5rem;
+}
+
+#wzry{
+    background-image: url('https://tse1-mm.cn.bing.net/th/id/OIP-C.2tLrUrbm45edJkdZlKuwJgHaEK?w=264&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7');
+    background-size: cover;
+    background-position: center; 
+}
+
+#hyrz{
+    background-image: url('https://tse3-mm.cn.bing.net/th/id/OIP-C.wABGdU-DXL914BeLO_VqcgHaEo?w=316&h=197&c=7&r=0&o=5&dpr=1.4&pid=1.7');
+    background-size: cover;
+    background-position: center; 
+}
+
+#sgs{
+    background-image: url('https://tse4-mm.cn.bing.net/th/id/OIP-C.opr3UECX9aGypqKGbnvDPQHaE6?w=187&h=124&c=7&r=0&o=5&dpr=1.4&pid=1.7');
+    background-size: cover;
+    background-position: center; 
+}
+
+/* 页面底部 */
+footer{
+    background-color: black;
+    /* height: 5rem; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+footer p{
+    color: white;
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+footer a{
+    color: aliceblue;
+    text-align: center;
+    grid-column: span 2;
+    margin: 1.5rem;
+}
+
+footer a:hover{
+    color: aqua;
+}
